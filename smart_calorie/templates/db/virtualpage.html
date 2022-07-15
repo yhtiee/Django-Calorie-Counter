@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Page</title>
+</head>
+<body>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        .nav-bar{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: center;
+            margin-right: 20px;
+            margin-left: 20px;
+            padding: 30px;
+        }
+        .logo-part1{
+            color: #8AAAE5;
+            font-size: xx-large;
+        }
+        .logo-part{
+            color: gray;
+        }
+        .logo{
+            width: 50%;
+            /* display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center; */
+        }
+        .nav-links{
+            width: 50%;
+            /* display: flex;
+            justify-content: center;
+            align-content: center; */
+
+        }
+        #nav-links{
+            display: flex;
+            justify-content: space-evenly;
+            align-content: center;
+            list-style: none;
+            font-size: large;
+            margin-top: 10px;
+            
+        }
+        #nav-links > li{
+            /* margin-right: 30px; */
+            margin-left: 40px;
+        }
+        #nav-links > li > a{
+            text-decoration: none;
+            color: black;
+        }
+        #nav-links > li > a:hover{
+            color: #8AAAE5;
+        }
+        .login-name{
+            display: none;
+        }
+        .nav-bar-login{
+            height: 30px;
+            background-color: #8AAAE5;
+            border: 1px solid black;
+            
+        }
+        .nav-bar-login:hover{
+            opacity: 0.8;
+        }
+        .nav-bar-login > a{
+            text-decoration: none;
+            color: white;
+            font-size: large;
+            padding: 20px;
+            font-weight: bold;
+        }
+        .logo > a{
+            text-decoration: none;
+        }
+        .list-links{
+            margin-top: 3px;
+        }
+        .homepageheader{
+            background-color: white;
+        }
+       
+    </style>
+    <header class="homepageheader">
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href=""> <h2 class="logo-part1"> SMART <span class="logo-part"> calorie-counter </span> </h2></a>
+            </div>
+            <div class="nav-links">
+                <ul id="nav-links">
+                    <li class="list-links"><a href=""> Support </a></li>
+                    <li class="list-links"><a href=""> About </a></li>
+                    <li class="list-links"><a href=""> Contact </a></li>
+                    <li class="login-name"><a href=""> Utibeabasi </a></li>
+                    <li><button class="nav-bar-login"> <a href=""> Log In </a></button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="extending-section">
+        {% block infuse %}
+
+
+        {% endblock %}
+    </section>
+    <footer>
+         
+    </footer>
+</body>
+</html>
